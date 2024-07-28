@@ -441,6 +441,16 @@ class Vacancy(commands.Cog):
         await bot.get_channel(1245307443546816544).send(embed = embed1, view=MyView())
         await ctx.reply('Набор отправлен!')
 
+    @commands.Cog.listener()
+    async def on_ready(self):
+        embed = disnake.Embed()
+        embed.set_image(url='https://media.discordapp.net/attachments/1262270134504919122/1265945169505681491/magicly-1714056933153.png?ex=66a74f50&is=66a5fdd0&hm=ac3f5604ad6683798ab7e7be40f0500daf951ff8fe8d465b08a7fffeba0d7f29&=&format=webp&quality=lossless&width=550&height=172')
+        embed1 = disnake.Embed(title='О наборе',
+            description='Давно хотел быть частью сервера?\nПроводить ивенты, следить за чатом, и т.п?\n\nТогда ждём тебя в нашем дружном коллективе!\n\nНа данный момент мы ищем: PR-менеджера, Модератора, Ивентера, Саппорта.\nМы оставляем за собой право отказать вам в заявке, если вы не подходите по каким-либо критериям.\n\nЗа шуточные заявки вы можете получить наказание.\n\n ・Moderator — Полная модерация сервера \n ・Support — Помощь новичкам и их адаптация по серверу. \n ・Пиар-Менеджер — Привлечения новых участников. \n ・EventMod — Проведения мероприятий.')
+
+        await bot.get_channel(1245307443546816544).send(embed = embed)
+        await bot.get_channel(1245307443546816544).send(embed = embed1, view=MyView())
+        
 
 def setup(bot: commands.Bot):
     bot.add_cog(Vacancy(bot))
