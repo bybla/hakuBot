@@ -437,8 +437,8 @@ class Vacancy(commands.Cog):
         embed1 = disnake.Embed(title='О наборе',
             description='Давно хотел быть частью сервера?\nПроводить ивенты, следить за чатом, и т.п?\n\nТогда ждём тебя в нашем дружном коллективе!\n\nНа данный момент мы ищем: PR-менеджера, Модератора, Ивентера, Саппорта.\nМы оставляем за собой право отказать вам в заявке, если вы не подходите по каким-либо критериям.\n\nЗа шуточные заявки вы можете получить наказание.\n\n ・Moderator — Полная модерация сервера \n ・Support — Помощь новичкам и их адаптация по серверу. \n ・Пиар-Менеджер — Привлечения новых участников. \n ・EventMod — Проведения мероприятий.')
 
-        await bot.get_channel(1245307443546816544).send(embed = embed)
-        await bot.get_channel(1245307443546816544).send(embed = embed1, view=MyView())
+        await bot.get_channel(1260965070494503005).send(embed = embed)
+        await bot.get_channel(1260965070494503005).send(embed = embed1, view=MyView())
         await ctx.reply('Набор отправлен!')
 
     @commands.Cog.listener()
@@ -448,8 +448,8 @@ class Vacancy(commands.Cog):
         embed1 = disnake.Embed(title='О наборе',
             description='Давно хотел быть частью сервера?\nПроводить ивенты, следить за чатом, и т.п?\n\nТогда ждём тебя в нашем дружном коллективе!\n\nНа данный момент мы ищем: PR-менеджера, Модератора, Ивентера, Саппорта.\nМы оставляем за собой право отказать вам в заявке, если вы не подходите по каким-либо критериям.\n\nЗа шуточные заявки вы можете получить наказание.\n\n ・Moderator — Полная модерация сервера \n ・Support — Помощь новичкам и их адаптация по серверу. \n ・Пиар-Менеджер — Привлечения новых участников. \n ・EventMod — Проведения мероприятий.')
 
-        await bot.get_channel(1245307443546816544).send(embed = embed)
-        await bot.get_channel(1245307443546816544).send(embed = embed1, view=MyView())
+        await bot.get_channel(1260965070494503005).send(embed = embed)
+        await bot.get_channel(1260965070494503005).send(embed = embed1, view=MyView())
         
 
 def setup(bot: commands.Bot):
