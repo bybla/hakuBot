@@ -115,7 +115,7 @@ class push_vacancy_support(disnake.ui.View):
             embed.add_field(name='Имя, возраст:', value = "```" + self.name_qs + "```", inline = False)
             embed.add_field(name='Опыт работы:', value = "```" + self.devise_qs + "```", inline = False)
             embed.add_field(name='Время в неделю:', value = "```" + self.exp_qs + "```", inline = False)
-            embed.add_field(name='Идеи на счет сервера:', value = "```" + self.mod_vs + "```", inline = False)
+            embed.add_field(name='Идеи на счет сервера:', value = "```" + self.event_qs + "```", inline = False)
             embed.add_field(name='Лучшие качества:', value = "```" + self.time_qs + "```", inline = False)
             embed.set_thumbnail(url=f'{self.user.avatar.url}')
             
@@ -135,7 +135,7 @@ class push_vacancy_support(disnake.ui.View):
             embed.add_field(name='Имя, возраст:', value = "```" + self.name_qs + "```", inline = False)
             embed.add_field(name='Опыт работы:', value = "```" + self.devise_qs + "```", inline = False)
             embed.add_field(name='Время в неделю:', value = "```" + self.exp_qs + "```", inline = False)
-            embed.add_field(name='Идеи на счет сервера:', value = "```" + self.mod_vs + "```", inline = False)
+            embed.add_field(name='Идеи на счет сервера:', value = "```" + self.event_qs + "```", inline = False)
             embed.add_field(name='Лучшие качества:', value = "```" + self.time_qs + "```", inline = False)
             embed.set_thumbnail(url=f'{self.user.avatar.url}')
             
@@ -174,9 +174,9 @@ class push_vacancy_piar(disnake.ui.View):
             embed.add_field(name='Подающий:', value = f'{self.user.mention}')
             embed.add_field(name='Имя, возраст:', value = "```" + self.name_qs + "```", inline = False)
             embed.add_field(name='Опыт работы:', value = "```" + self.devise_qs + "```", inline = False)
-            embed.add_field(name='Время в неделю:', value = "```" + self.exp_qs + "```", inline = False)
-            embed.add_field(name='Идеи на счет сервера:', value = "```" + self.mod_vs + "```", inline = False)
-            embed.add_field(name='Лучшие качества:', value = "```" + self.time_qs + "```", inline = False)
+            embed.add_field(name='Время в неделю:', value = "```" + self.creative_qs + "```", inline = False)
+            embed.add_field(name='Идеи на счет сервера:', value = "```" + self.time_pos + "```", inline = False)
+            embed.add_field(name='Лучшие качества:', value = "```" + self.online + "```", inline = False)
             embed.set_thumbnail(url=f'{self.user.avatar.url}')
             
             
@@ -194,9 +194,9 @@ class push_vacancy_piar(disnake.ui.View):
             embed.add_field(name='Подающий:', value = f'{self.user.mention}')
             embed.add_field(name='Имя, возраст:', value = "```" + self.name_qs + "```", inline = False)
             embed.add_field(name='Опыт работы:', value = "```" + self.devise_qs + "```", inline = False)
-            embed.add_field(name='Время в неделю:', value = "```" + self.exp_qs + "```", inline = False)
-            embed.add_field(name='Идеи на счет сервера:', value = "```" + self.mod_vs + "```", inline = False)
-            embed.add_field(name='Лучшие качества:', value = "```" + self.time_qs + "```", inline = False)
+            embed.add_field(name='Время в неделю:', value = "```" + self.creative_qs + "```", inline = False)
+            embed.add_field(name='Идеи на счет сервера:', value = "```" + self.time_pos + "```", inline = False)
+            embed.add_field(name='Лучшие качества:', value = "```" + self.online + "```", inline = False)
             embed.set_thumbnail(url=f'{self.user.avatar.url}')
             
             member = self.user
@@ -242,20 +242,20 @@ class push_vacancy_eventMod(disnake.ui.View):
             
             member = self.user
 
-            role = interaction.guild.get_role(1260967414527561858)
-            embed = disnake.Embed(title="Статус вашей заявки изменен.", description=f"Статус вашей заявки на **EventMod** изменен на `Одобрено`.\n Скоро вам назначат собеседование")
+            role = interaction.guild.get_role(1259738528934268943)
+            embed = disnake.Embed(title="Ста`тус вашей заявки изменен.", description=f"Статус вашей заявки на **EventMod** изменен на `Одобрено`.\n Скоро вам назначат собеседование")
             
             await member.add_roles(role)
             await member.send(embed=embed)
 
-            await self.msg.edit(f"Статус: Одобрено. Изменил: {interaction.user.mention} \n `1.`<@&1260967414527561858> - роль успешно выдана", view=None)
+            await self.msg.edit(f"Статус: Одобрено. Изменил: {interaction.user.mention} \n `1.`<@&1259738528934268943> - роль успешно выдана", view=None)
         elif select.values[0] == 'Отклонить':
             embed = disnake.Embed(title='Заявка на EventMod')
             embed.add_field(name='Подающий:', value = f'{self.user.mention}')
             embed.add_field(name='Имя, возраст:', value = "```" + self.name_qs + "```", inline = False)
-            embed.add_field(name='Опыт работы:', value = "```" + self.devise_qs + "```", inline = False)
-            embed.add_field(name='Время в неделю:', value = "```" + self.exp_qs + "```", inline = False)
-            embed.add_field(name='Идеи на счет сервера:', value = "```" + self.mod_vs + "```", inline = False)
+            embed.add_field(name='Опыт работы:', value = "```" + self.exp_qs + "```", inline = False)
+            embed.add_field(name='Время в неделю:', value = "```" + self.time_pos + "```", inline = False)
+            embed.add_field(name='Идеи на счет сервера:', value = "```" + self.idea_qs + "```", inline = False)
             embed.add_field(name='Лучшие качества:', value = "```" + self.best + "```", inline = False)
             embed.set_thumbnail(url=f'{self.user.avatar.url}')
             
@@ -282,7 +282,7 @@ class moder (disnake.ui.Modal):
 
     async def callback(self, interaction: disnake.ModalInteraction):
 
-        embed = disnake.Embed(title='Заявка на Helper')
+        embed = disnake.Embed(title='Заявка на Moderator')
         embed.add_field(name='Подающий:', value = f'{interaction.user.mention}')
         embed.add_field(name='Имя, возраст:', value = "```" + interaction.text_values.get("name") + "```", inline = False)
         embed.add_field(name='Опыт работы:', value = "```" + interaction.text_values.get("device") + "```", inline = False)
@@ -330,6 +330,9 @@ class support(disnake.ui.Modal):
         channel_id = 1267198328446259325
         channel = interaction.bot.get_channel(channel_id)
         msg = await channel.send(embed=embed)
+        
+        await msg.edit(embed=embed, view=push_vacancy_support(user=interaction.user, name_qs=interaction.text_values["name"], device_qs=interaction.text_values["device"], exp_qs=interaction.text_values["exp"], event_qs=interaction.text_values["mod_voice"], time_qs=interaction.text_values["time"], msg=msg))
+        
         embed_wait = disnake.Embed()
         embed_wait.add_field(name="Ваша заявка на рассмотрении", value="Ожидайте ответ...", inline=True)
         embed_wait.set_thumbnail(url=f"{interaction.user.avatar.url}")
@@ -353,15 +356,18 @@ class piar(disnake.ui.Modal):
         embed = disnake.Embed(title='Заявка на Пиар-Менеджера')
         embed.add_field(name='Подающий', value = f'{interaction.user.mention}')
         embed.add_field(name='Имя, возраст', value = "```" + interaction.text_values.get("name") + "```", inline = False)
-        embed.add_field(name='Опыт работы', value = "```" + interaction.text_values.get("time_pos") + "```", inline = False)
-        embed.add_field(name='Время в неделю', value = "```" + interaction.text_values.get("device") + "```", inline = False)
-        embed.add_field(name='Идеи на счет сервера', value = "```" + interaction.text_values.get("creation") + "```", inline = False)
+        embed.add_field(name='Опыт работы', value = "```" + interaction.text_values.get("device") + "```", inline = False)
+        embed.add_field(name='Время в неделю', value = "```" + interaction.text_values.get("exp") + "```", inline = False)
+        embed.add_field(name='Идеи на счет сервера', value = "```" + interaction.text_values.get("mod_voice") + "```", inline = False)
         embed.add_field(name='Лучшие качества', value = "```" + interaction.text_values.get("time") + "```", inline = False)
         embed.set_thumbnail(url=f'{interaction.user.avatar.url}')
 
         channel_id = 1267198328446259325
         channel = interaction.bot.get_channel(channel_id)
         msg = await channel.send(embed=embed)
+        
+        await msg.edit(embed=embed, view=push_vacancy_piar(user=interaction.user, name_qs=interaction.text_values["name"], device_qs=interaction.text_values["device"], time_pos=interaction.text_values["mod_voice"], creative_qs=interaction.text_values["time"], online=interaction.text_values["time"], msg=msg))
+
         embed_wait = disnake.Embed()
         embed_wait.add_field(name="Ваша заявка на рассмотрении", value="Ожидайте ответ...", inline=True)
         embed_wait.set_thumbnail(url=f"{interaction.user.avatar.url}")
@@ -394,6 +400,9 @@ class eventMod(disnake.ui.Modal):
         channel_id = 1267198328446259325
         channel = interaction.bot.get_channel(channel_id)
         msg = await channel.send(embed=embed)
+
+        await msg.edit(embed=embed, view=push_vacancy_eventMod(user=interaction.user, name_qs=interaction.text_values["name"], exp_qs=interaction.text_values["exp"], time_pos=interaction.text_values["time"], idea_qs=interaction.text_values["idea"], best_qs=interaction.text_values["best"], msg=msg))
+
         embed_wait = disnake.Embed()
         embed_wait.add_field(name="Ваша заявка на рассмотрении", value="Ожидайте ответ...", inline=True)
         embed_wait.set_thumbnail(url=f"{interaction.user.avatar.url}")

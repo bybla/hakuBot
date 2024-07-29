@@ -19,4 +19,4 @@ async def on_ready():
 
 bot.load_extension("cogs.vacancy")
 
-bot.run(f"{data["token"]}")
+bot.run(data["token"])
