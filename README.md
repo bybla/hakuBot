@@ -1,4 +1,4 @@
-# senkoBot
+# hakuBot
 __**Бот создан специально для сервера Haku(https://discord.gg/reAtgThfVB)**__
 
 # Для старта бота:
