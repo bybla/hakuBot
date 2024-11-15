@@ -1,5 +1,5 @@
 # senkoBot
-__**Бот создан специально для сервера Senko(https://discord.gg/JUREqtytFs)**__
+__**Бот создан специально для сервера Haku(https://discord.gg/reAtgThfVB)**__
 
 # Для старта бота:
 > 1. Создайте **config.json** в корне проекта
